@@ -51,7 +51,7 @@ const generateAiImages = async (userPrompt, userImgQuantity) => {
     console.log(data);
     updateImageCard([...data]);
   } catch (error) {
-    alert(error.message);
+    alert("Failed to generate AI images. Make sure your API key is valid." + " Or your openapi plan is expired.");
   } finally {
     generateBtn.removeAttribute("disabled");
     generateBtn.innerText = "Generate";
